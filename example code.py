@@ -6,7 +6,7 @@ from turtle import *
 
 G = 6.67428e-11
 AU = (149.6e6 * 1000)
-SCALE = 250 / AU
+SCALE = 50 / AU #originally 250
 
 class Orbiter(Turtle):
 	name = 'Orbiter'
@@ -110,13 +110,13 @@ def main():
 	
 	planetx = Orbiter()
 	planetx.name = 'nibiru'
-	planetx.mass = 10**26
-	planetx.px = 0.8*AU
+	planetx.mass = 10*30
+	planetx.px = 0.99*AU
 	planetx.vy = 32*1000
 	planetx.pencolor('purple')
 	planetx.dot(3, 'purple')
 	
-	loop([sun, earth, venus, mars, mercury, planetx]) 
+	loop([sun, earth, venus, mars, mercury])#, planetx]) 
 
 if __name__ == '__main__':
 	main()
